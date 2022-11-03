@@ -38,19 +38,25 @@ namespace csharp
             };
 
             var app = new GildedRose(Items);
-
-
-            for (var i = 0; i < 31; i++)
+            try
             {
-                Console.WriteLine("-------- day " + i + " --------");
-                Console.WriteLine("name, sellIn, quality");
-               foreach(var item in Items)
+
+                for (var i = 0; i < 31; i++)
                 {
-                    System.Console.WriteLine(item);
-                };
-                Console.WriteLine("");
-                app.UpdateQuality();
-               
+                    Console.WriteLine("-------- day " + i + " --------");
+                    Console.WriteLine("name, sellIn, quality");
+                    foreach (var item in Items)
+                    {
+                        System.Console.WriteLine(item);
+                    };
+                    Console.WriteLine("");
+                    app.UpdateQuality();
+
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Program stopped with Exception: {ex.Message}");
             }
             Console.ReadLine();
         }
