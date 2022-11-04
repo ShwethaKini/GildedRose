@@ -16,8 +16,8 @@ Console will open with output.
 
 Output we can see all items their sellin value and quality till next 30 days.
 
-Item   SellIn   Quantity
--      -        -
+Item     SellIn      Quality
+***      ***         ***
 
 Incase of exception it will write exception message in console.
 
