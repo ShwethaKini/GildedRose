@@ -4,7 +4,7 @@ namespace csharp.Factory
 {
     public class GildedRoseFactory
     {
-        private dynamic newInstance;
+        private readonly IItem newInstance;
         public GildedRoseFactory(Item item)
         {
             switch (item.Name)
